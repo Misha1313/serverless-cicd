@@ -1,0 +1,18 @@
+# "org" ensures this Service is used with the correct Serverless Framework Access Key.
+org: mineer
+# "service" is the name of this project. This will also be added to your AWS resource names.
+service: serverless-cicd
+
+provider:
+  name: aws
+  runtime: nodejs20.x
+  stage: dev
+  region: eu-north-1
+
+functions:
+  hello:
+    handler: handler.logger
+    events:
+      - httpApi:
+          path: /message
+          method: get
