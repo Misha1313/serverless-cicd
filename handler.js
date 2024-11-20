@@ -3,7 +3,7 @@ exports.logger = async (event) => {
     statusCode: 200,
     body: JSON.stringify({
       message: "Serverless CI/CD Demo",
-      version: 'v4.0',
+      version: 'v5.0',
       timestamp: new Date()
     }),
   };
